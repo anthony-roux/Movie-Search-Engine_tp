@@ -13,20 +13,26 @@ function App() {
   const film =useFilms();
   const genre =useGenre();
   const filmid =useFilmsId();
+  const breakPoint = [
+    {width: 320, itemsToShow: 1},
+    {width: 500, itemsToShow: 2},
+    {width: 1000, itemsToShow: 3 },
+    {width: 1500, itemsToShow: 1},
+  ]
   console.log(genre);
   console.log(film);
   console.log(filmid);
   return (
+
     <div className="App">
       <BrowserRouter>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail" component={MovieDetail}></Route>
-        <Carousel>
+        <Carousel breakPoints={breakPoint}>
           <Slider number="1"/>
           <Slider number="2"/>
           <Slider number="3"/>
           <Slider number="4"/>
-
         </Carousel>
         {/* <Route component={()=> '404'}></Route> */}
       </BrowserRouter>

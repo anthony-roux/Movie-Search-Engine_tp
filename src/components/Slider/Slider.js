@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import './Slider.css';
@@ -9,6 +9,7 @@ const NumberStyle = styled.span`
 const DivStyle = styled.div`
   background-color: #333;
 `;
+
 
 const Slider = ({ number }) => 
 <DivStyle className="slide">
