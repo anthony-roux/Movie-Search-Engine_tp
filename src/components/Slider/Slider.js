@@ -1,51 +1,44 @@
-import React from 'react';
-import Carousel from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import React, {useState} from 'react';
+import './Slider.scss';
+// import Carousel from '@brainhubeu/react-carousel';
+// import '@brainhubeu/react-carousel/lib/style.css';
 
-const MyCarousel = () => (
-  <Carousel plugins={['arrows']}>
-    <img src={'exemple/imageOne'} alt="exemple" />
-    <img src={'exemple/imageTwo.jpg'} alt="exemple" />
-    <img src={'exemple/imageThree.jpg'} alt="exemple" />
-  </Carousel>
-);
+// const MyCarousel = () => (
+//   <Carousel plugins={['arrows']}>
+//     <img src={'exemple/imageOne'} alt="exemple" />
+//     <img src={'exemple/imageTwo.jpg'} alt="exemple" />
+//     <img src={'exemple/imageThree.jpg'} alt="exemple" />
+//   </Carousel>
+// );
 
-export default MyCarousel;
+// export default MyCarousel;
 
+function Slider(){
+  let sliderArr =[1,2,3,4,5];
+  const [x, setX] = useState(0)
+  const goLeft= () =>{
+    setX(x + 100);
+  };
+  const goRight= () =>{
+    console.log(x);
+    (x=== -100*(sliderArr.length-1)) ? setX(0) : setX(x - 100);
+  };
 
+  return (
+    <div className="slider">
+      {
+        sliderArr.map ((item, index)=> {
+          return (
+            <div key={index} className="slide" style={{transform:`translateX(${x})`}}>
+              {item}
+            </div>
 
-// import Carousel, { Dots } from '@brainhubeu/react-carousel';
-// import '@brainhubeu/react-carousel/lib/style.css'; import { useState } from 'react';
-
-// const sliderWithDots = () => {
-//   const [value, setValue] = useState(0);
-
-//   const onChange = value => {
-//   setValue(value);
-//   }
-//   return (
-//     <div>
-//       <Carousel
-//         value={value}
-//         onChange={onChange}
-//       >
-//         <div>
-//             <div className="slider">1</div>
-//             <div className="slider">2</div>
-//         </div>  
-
-//       </Carousel>
-//       <Dots
-//         value={this.state.value}
-//         onChange={this.onChange}
-//         thumbnails={[
-//           (<div key={1} className="slider" />),
-         
-//           (<div key={12} className="slider" />),
-//         ]}
-//       />
-//     </div>
-//   );
-// };
-
-// export default sliderWithDots;
+          );
+        })}
+        <button id="goLeft" onClick={goLeft}>left</button>
+        <button id="goRight" onClick={goRight}>Right</button>
+      
+    </div>
+  );
+}
+export default Slider;
