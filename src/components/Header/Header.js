@@ -3,16 +3,13 @@ import React from 'react';
 import './Header.scss';
 import logo from '../../img/Eiga.svg';
 import '../../scss/style.scss';
-import { useState } from 'react';
 
 
 function Header() {
   const input = document.querySelector('.header__input');
   const search_icon = document.querySelector('.search-icon');
 
-  // const searchField = useState(false);
   function show_searchField() {
-    // searchField('<input className="header__input" type="text"/>')
     input.classList.add('active');
     search_icon.classList.add('active');
   }
