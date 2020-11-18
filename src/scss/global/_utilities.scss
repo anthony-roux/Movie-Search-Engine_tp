@@ -1,0 +1,107 @@
+//***************** COLORS *********************//
+
+// PRIMARY :
+$white: #ffffff;
+
+
+// SECONDARY
+$blue: #0596DE;
+$grey: #7791A2;
+
+
+
+// GRADIENT
+$gradientOriginal: linear-gradient(180deg, #03BDDF 0%, #0596DE 100%);
+
+
+
+//***************** FONTS *********************//
+
+$montserrat: "Montserrat",
+sans-serif;
+
+
+
+
+//************************* BREAKPOINTS *************************//
+$phone-up: 480px;
+
+$tablet-up: 768px;
+$tablet-down: 767px;
+
+$desktop-down: 1087px;
+$desktop-up: 1088px;
+$desktop-1200: 1200px;
+
+$desktop-large: 1366px;
+
+
+
+
+//************************* MEDIA QUERIES *************************//
+$phone_375px: 375px;
+
+
+@mixin phone_375px {
+  @media (min-width: $phone_375px) {
+    @content;
+  }
+}
+
+@mixin phone-up {
+  @media (min-width: $phone-up) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $tablet-up) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $tablet-down) {
+    @content;
+  }
+}
+@mixin desktop-down {
+  @media (max-width: $desktop-down) {
+    @content;
+  }
+}
+
+
+@mixin desktop-1200 {
+  @media (min-width: $desktop-1200) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desktop-up) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (min-width: $desktop-large) {
+    @content;
+  }
+}
+
+
+
+
+
+
+
+//***************** MIXINS *********************//
+
+@mixin flexbox($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
