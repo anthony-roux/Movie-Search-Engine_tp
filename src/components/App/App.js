@@ -5,6 +5,7 @@ import useGenre from '../../hooks/useGenre/useGenre.js'
 import useFilmsId from '../../hooks/useFilmsId/useFilmsId.js'
 import HomePage from '../HomePage/HomePage.js'
 import MovieDetail from '../MovieDetail/MovieDetail.js'
+import Slider from '../Slider/Slider.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail" component={MovieDetail}></Route>
-        <Route component={()=> '404'}></Route>
+        <Route exact path="/Slider" component={Slider}></Route>
+        {/* <Route component={()=> '404'}></Route> */}
       </BrowserRouter>
     </div>
   );
