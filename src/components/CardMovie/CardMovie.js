@@ -1,17 +1,21 @@
+import React from 'react';
+import './card.css';
+import img from '../../img/dead.png';
 
 function CardMovie(props) {
-  
 return (
 <div>
     <div className="card">
-        <img src={props.imgsrc} className="card-img" alt=""/>
-            <div className="card-body">
-                <h1>{propsTitle}</h1>
-                <p className="card-text gern">{props.gern}</p>
-            </div>
+        <img src={img} className="card_img" alt=""/>{/*props.imgsrc*/}
+            <div className="card_body">
+            <h1 className="card_title">DeadPool</h1> {/*props.title*/}
+                <p className="card_gern">Action/Comédie</p>{/*props.gern*/}
+        </div>
     </div>
 </div>
     );
   }
   
 export default CardMovie;
+
+
