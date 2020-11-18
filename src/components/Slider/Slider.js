@@ -4,16 +4,15 @@ import styled from 'styled-components';
 import './Slider.css';
 
 const NumberStyle = styled.span`
-  color: yellowgreen;
-  border : 1px solid red;
-  font-size: 12px
+  color: white;
 `;
 const DivStyle = styled.div`
-  background-color: yellow;
+  background-color: #333;
 `;
 
-const Slider = ({ number }) => <DivStyle className="slide">
-  <NumberStyle>[number]</NumberStyle>
+const Slider = ({ number }) => 
+<DivStyle className="slide">
+  <NumberStyle>{number}</NumberStyle>
 </DivStyle>
 export default Slider;
 

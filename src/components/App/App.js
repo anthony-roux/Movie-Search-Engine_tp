@@ -22,10 +22,11 @@ function App() {
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail" component={MovieDetail}></Route>
         <Carousel>
-          <Slider />
-          <Slider />
-          <Slider />
-          <Slider />
+          <Slider number="1"/>
+          <Slider number="2"/>
+          <Slider number="3"/>
+          <Slider number="4"/>
+
         </Carousel>
         {/* <Route component={()=> '404'}></Route> */}
       </BrowserRouter>
