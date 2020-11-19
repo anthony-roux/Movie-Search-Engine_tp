@@ -7,4 +7,5 @@ function HomePage(props) {
             <CardMovie surch={surch}></CardMovie>
         </div>
     );
+}
 export default HomePage;

@@ -43,10 +43,10 @@ return (
                     
             </div>
         </div>
-/*
+{/*
 import React from "react";
-import "./CardMovie.scss";*/
-/*
+import "./CardMovie.scss";
+
 function CardMovie(props) {
     let genresString = props.genres.map((genre) => {
         if (typeof genre === "undefined") {
@@ -65,8 +65,10 @@ return (
             </div
 
     </div>
-</div>
-    );
+</div>   
+*/}
+  </div>
+</div>  
+);
   }
- */
 export default CardMovie;
