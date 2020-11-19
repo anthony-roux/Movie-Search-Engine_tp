@@ -6,6 +6,7 @@ import Carousel from 'react-elastic-carousel';
 import './Caroussel.scss';
 import Slider from '../Slider/Slider.js'
 import Header from '../../components/Header/Header';
+import Footer from '../Footer/Footer';
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
 // const API = 
@@ -40,7 +41,6 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
     console.log(ListChristmasMovie)
     return (
       <div>
-        <Header/>
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardChristmasMovie}
         </Carousel>

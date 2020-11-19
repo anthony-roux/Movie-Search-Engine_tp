@@ -12,6 +12,7 @@ import MovieDetail from '../MovieDetail/MovieDetail.js'
 import CardMovies from '../CardMovie/CardMovies.js'
 import CardPopularMovies from '../CardMovie/CardPopularMovies.js'
 import ListChristmasMovies from '../CardMovie/ListChristmasMovie.js'
+import UserSurch from '../../hooks/useSurch/useSurch.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
 
 
@@ -22,17 +23,16 @@ function App() {
   const filmid = useFilmsId();
   const usePopularFilm = usePopularMovie();
   const useChristmasFilm = useChristmasMovie();
+  const useSurch = UserSurch();
   console.log(genre);
   console.log(film);
   console.log(filmid);
   return (
     <div className="App">
       <BrowserRouter>
-        <Route exact path="/" component={() => <HomePage genres={genre} movies={useChristmasFilm}/>}></Route>
-        <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
-        <Route exact path="/CardMovies" component={() => <CardMovies genres={genre} movies={film2} />}></Route>
-        <Route exact path="/CardPopularMovies" component={() => <CardPopularMovies genres={genre} movies={usePopularFilm} />}></Route>
-        <Route exact path="/ListChristmasMovies" component={() => <ListChristmasMovies genres={genre} movies={useChristmasFilm}/>}></Route>
+        <Route exact path="/" component={() => <HomePage surch={useSurch} genres={genre} moviesChristmas={useChristmasFilm} movies={usePopularFilm}/>}></Route>
+        <Route exact path="/MovieDetail/:id" component={(props) => <MovieDetail {...props} surch={useSurch} />}></Route>
+        <Route exact path="/CardMovies" component={() => <CardMovies surch={useSurch} genres={genre} movies={film2} />}></Route>
       </BrowserRouter>
     </div>
   );

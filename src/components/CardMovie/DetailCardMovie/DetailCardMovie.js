@@ -8,7 +8,8 @@ import {Link} from 'react-router-dom';
 import imgdefault from '../../MovieDetail/faultDetection-2-300x300.png'
 
 function DetailCardMovie(props) {
-    const {surch} = props;
+
+    const surch = props.surch[0]
     const linkimg = "https://image.tmdb.org/t/p/w500"
     const [detailsFilm, setdetailsFilm] = useState({
         id:'',
@@ -19,7 +20,7 @@ function DetailCardMovie(props) {
         vote_average:'',
     });
     useEffect(()=>{
-      if (surch) {
+      if (surch.surch != "") {
         getfilms(surch).then(data=>setdetailsFilm(data));
       }
     },[surch])

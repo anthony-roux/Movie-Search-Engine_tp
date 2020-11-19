@@ -9,6 +9,7 @@ import './MovieDetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import useGenre from '../../hooks/useGenre/useGenre.js'
 import Header from '../../components/Header/Header';
+import Footer from '../Footer/Footer';
 function MovieDetail(props){
     const id = props.match.params.id;
     const [Film, setFilm] = useState({
@@ -45,7 +46,7 @@ function MovieDetail(props){
 
     return (
         <div>
-            <Header/>
+            <Header surch={props.surch} />
             <div className="header_detail"></div>
             <div className="container-fluid">
                 <div className="row">
@@ -74,6 +75,7 @@ function MovieDetail(props){
                 </div>
             </div>
             <button className="lien_movie"> Visit website</button>
+            <Footer/>
         </div>
       );
     /*return (

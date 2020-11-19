@@ -4,16 +4,16 @@ import '../../scss/style.scss';
 import {useState,useRef,useEffect} from 'react';
 import SearchResultMovies from './SearchResultMovies/SearchResultMovies'
 
-function Header() {
+function Header(props) {
+
+  const setsurch = props.surch[1]
+  const surch = props.surch[0]
 
     const inputRef = useRef(null);
     useEffect(()=>{
         inputRef.current.focus();
     },[inputRef])
 
-    const [surch, setsurch] = useState({
-      surch:''
-    });
   
     function FilmChange(event) {
         setsurch({

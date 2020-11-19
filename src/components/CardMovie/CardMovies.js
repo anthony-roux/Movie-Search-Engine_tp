@@ -3,6 +3,7 @@ import React from 'react';
 import CardMovie from './CardMovie.js';
 import Header from '../../components/Header/Header';
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
+import Footer from '../Footer/Footer';
 
 // const API = 
   function CardMovies(props) {
@@ -28,8 +29,9 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
     console.log(listOfCardMovie)
     return (
       <div>
-        <Header />
+        <Header surch={props.surch} />
         {listOfCardMovie}
+        <Footer/>
       </div>
     )
   }
