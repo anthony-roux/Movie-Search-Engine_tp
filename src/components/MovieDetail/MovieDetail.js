@@ -5,6 +5,8 @@ import { useState,useEffect } from 'react';
 import { getFilmid } from '../../service/filmid/filmid.js'
 import { getRecomandations } from '../../service/recomandations/recomandations.js'
 import imgdefault from './faultDetection-2-300x300.png'
+import './MovieDetail.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 //import useGenre from '../../hooks/useGenre/useGenre.js'
 function MovieDetail(props){
     const id = props.match.params.id;
@@ -42,6 +44,34 @@ function MovieDetail(props){
 
     return (
         <div>
+            <div className="header_detail"></div>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col colonne-1">
+                        <h1>Joker</h1>
+                        <p><span className="detail_note">7.4</span>/10</p>
+                    </div>
+                    <div className="col colonne-2">
+                        <p><span className="detail_genre">Thriller</span> </p>
+                        <div className="alignments">
+                            <p><span className="detail_annee">2019</span></p>
+                            <p><span className="detail_duree">122 minutes</span></p>
+                        </div>
+                    </div>
+                    <div className="colonne-3">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      );
+    /*return (
+        <div>
             <p>{Film.id}</p>
             <p>{Film.title}</p>
             <p>{Film.overview}</p>
@@ -69,6 +99,6 @@ function MovieDetail(props){
             </div>
 
         </div>
-    );
+    );*/
 }
 export default MovieDetail;

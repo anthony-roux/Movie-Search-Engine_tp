@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Righteous-Regular";
+    src: url("../../font/Righteous-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rambla-Regular";
+    src: url("../../font/Rambla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rambla-Bold";
+    src: url("../../font/Rambla-Bold.ttf") format("truetype");
+}
+
+body{
+    background-color: #13131C !important;
+}
+
+h1{
+    font-family: 'Righteous-Regular';
+    font-weight: 400;
+    color: #FFFEFE;
+    letter-spacing: 1px;
+}
+
+/************************** Media Queries **************************/
+
+@media only screen and (min-width: 0px) and (max-width: 768px){
+
+    .header_detail{
+        width: 100%;
+        height: 230px;
+        background-image: url("../../image_test/joker.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0 !important;
+    }
+
+    .container{
+        width: 100% !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .colonne-1{
+        text-align: left;
+        font-family: 'Rambla-Bold';
+        color: #FFFEFE;
+    }
+
+    .colonne-1 .detail_note{
+        color: #B171D9;
+    }
+
+    .colonne-2{
+        text-align: right;
+        line-height: 2px;
+        margin-top: 18px;
+    }
+
+    .colonne-2 .detail_genre{
+        font-family: 'Rambla-Bold';
+        font-size: 16px;
+        color: #B171D9;
+    }
+
+    .colonne-2 .detail_annee{
+        font-family: 'Rambla-Bold';
+        font-size: 14px;
+        color: #FFFEFE;
+    }
+
+    .colonne-2 .detail_duree{
+        font-family: 'Rambla-Regular';
+        font-size: 14px;
+        color: #FFFEFE;
+    }
+
+    .colonne-3 p{
+        font-family: 'Rambla-Regular';
+        font-size: 16px;
+        text-align: left;
+        color: #FFFEFE;
+        line-height: 20px;
+        margin-top: 15px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 1366px){
+    .header_detail{
+        width: 100%;
+        height: 530px;
+        background-image: url("../../image_test/joker.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0 !important;
+    }
+
+    .container{
+        width: 100% !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        margin: 0px 0px !important;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        margin-top:-120px !important;
+    }
+    .col {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .colonne-1{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-family: 'Rambla-Bold';
+        color: #FFFEFE;
+        z-index: 1 !important;
+    }
+    .colonne-1 h1 {
+        font-size: 140px;
+        margin: 0rem !important;
+    }
+    .colonne-1 p{
+        margin: 0rem !important;
+        align-items: flex-end;
+        margin-top: 110px !important;
+        font-size: 22px;
+    }
+
+    .colonne-1 .detail_note{
+        color: #B171D9;
+    }
+
+    .colonne-2{
+        text-align: left;
+        line-height: 2px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .colonne-2 .detail_genre{
+        font-family: 'Rambla-Bold';
+        font-size: 48px;
+        color: #B171D9;
+    }
+
+    .colonne-2 .detail_annee{
+        font-family: 'Rambla-Bold';
+        font-size: 28px;
+        color: #FFFEFE;
+    }
+
+    .colonne-2 .detail_duree{
+        font-family: 'Rambla-Regular';
+        font-size: 20px;
+        color: #FFFEFE;
+    }
+
+    .colonne-3 p{
+        font-family: 'Rambla-Regular';
+        font-size: 16px;
+        text-align: left;
+        color: #FFFEFE;
+        line-height: 20px;
+        margin-top: 15px;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
