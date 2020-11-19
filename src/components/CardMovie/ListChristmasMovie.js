@@ -34,11 +34,10 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
       console.log(`lil ${genres}`)
 
       return (
-        <Slider cardMovie={<CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} />}/>
+        <Slider key={`${movie.original_title}-${Math.random()}`} cardMovie={<CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} />}/>
       )
     })
 
-    console.log(ListChristmasMovie)
     return (
       <div>
         <Carousel className="caroussel" breakPoints={breakPoint}>
