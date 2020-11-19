@@ -1,3 +1,6 @@
+@import '../../scss/global/utilities';
+
+
 .header {
   height: 100px;
   padding: 0 30px;
@@ -5,10 +8,7 @@
 
   &__container {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(row, space-between, center);
   }
 
 
@@ -17,13 +17,12 @@
     display: flex;
     align-items: flex-end;
 
-
-
     .search-icon {
-      fill: white;
+      fill: $white;
+      cursor: pointer;
 
       &.active {
-        fill: #B171D9;
+        fill: $purple1;
       }
     }
 
@@ -36,14 +35,14 @@
       &.active {
         width: 120px;
         height: 100%;
-        border-bottom: 2px solid #B171D9;
+        border-bottom: 2px solid $purple1;
         transition: 500ms;
         margin-left: 8px;
         outline: none;
-        color: #B171D9;
+        color: $purple1;
         font-size: 16px;
 
-        @media (min-width: 768px) {
+        @include tablet-up {
           width: 320px;
         }
       }
