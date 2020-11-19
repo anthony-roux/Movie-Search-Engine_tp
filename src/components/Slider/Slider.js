@@ -10,7 +10,6 @@ const DivStyle = styled.div`
   background-color: #333;
 `;
 
-
 const Slider = ({ number }) => 
 <DivStyle className="slide">
   <NumberStyle>{number}</NumberStyle>
