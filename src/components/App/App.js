@@ -16,8 +16,10 @@ function App() {
   const breakPoint = [
     {width: 320, itemsToShow: 1},
     {width: 500, itemsToShow: 2},
-    {width: 1000, itemsToShow: 3 },
-    {width: 1500, itemsToShow: 1},
+    {width: 700, itemsToShow: 3 },
+    {width: 1000, itemsToShow: 4},
+    {width: 1200, itemsToShow: 5},
+    {width: 1400, itemsToShow: 6},
   ]
   console.log(genre);
   console.log(film);
@@ -33,6 +35,8 @@ function App() {
           <Slider number="2"/>
           <Slider number="3"/>
           <Slider number="4"/>
+          <Slider number="5"/>
+          <Slider number="6"/>
         </Carousel>
         {/* <Route component={()=> '404'}></Route> */}
       </BrowserRouter>
