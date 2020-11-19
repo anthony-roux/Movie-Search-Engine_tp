@@ -22,7 +22,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/MovieDetail" component={MovieDetail}></Route>
+        <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route component={()=> '404'}></Route>
       </BrowserRouter>
     </div>
