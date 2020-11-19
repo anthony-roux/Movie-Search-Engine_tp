@@ -1,4 +1,4 @@
 function HomePage() {
-    return'HomePage.js'
+    return'Hello World'
 }
 export default HomePage;
