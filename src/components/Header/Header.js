@@ -1,7 +1,6 @@
 // import React from 'react';
 import './Header.scss';
 import logo from '../../img/Eiga.svg';
-// import {useState} from 'react';
 // import useFilms from '../../hooks/useFilms/useFilms.js'
 // import Filter from '../Filter/Filter.js'
 // import List from '../List/List';
@@ -10,21 +9,11 @@ import React, { useState } from 'react';
 
 
 function Header() {
-  // const input = document.querySelector('.header__input');
-  // const search_icon = document.querySelector('.search-icon');
-
-
-  // useState = {
-  //   isActive: false
-  // };
-
 
   const [isActive, setIsActive ] = useState(false)
   
   function show_searchField() {
     setIsActive(true)
-    // input.classList.add('active');
-    // search_icon.classList.add('active');
   }
 
 
