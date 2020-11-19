@@ -1,8 +1,9 @@
 import React from 'react';
-import './card.css';
+import './cardTEST.css';
 import img from '../../img/dead.png';
 
 function CardMovie(props) {
+    const { surch,Film } = props;
 return (
 <div>
     <div className="card">
@@ -17,5 +18,3 @@ return (
   }
   
 export default CardMovie;
-
-

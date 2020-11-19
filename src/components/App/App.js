@@ -9,7 +9,6 @@ import HomePage from '../HomePage/HomePage.js'
 import MovieDetail from '../MovieDetail/MovieDetail.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 
 function App() {
   const film =useFilms();
@@ -26,7 +25,6 @@ function App() {
         <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route component={()=> '404'}></Route>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
