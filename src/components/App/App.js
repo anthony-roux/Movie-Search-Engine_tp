@@ -14,7 +14,6 @@ import CardPopularMovies from '../CardMovie/CardPopularMovies.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
 //import CardMovie from '../CardMovie/CardMovie';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 
 function App() {
   const film = useFilms();
@@ -28,8 +27,8 @@ function App() {
   return (
 
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header></Header>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail" component={MovieDetail}></Route>
         <Route exact path="/CardMovies" component={() => <CardMovies genres={genre} movies={film2} />}></Route>
@@ -37,7 +36,6 @@ function App() {
         <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route component={()=> '404'}></Route>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
