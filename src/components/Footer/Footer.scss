@@ -9,19 +9,44 @@
   padding: 24px 16px;
   font-family: Rambla;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+
+  &__logoContainer {
+    @media (min-width: 1024px) {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+
+      .footer__logo {
+        width: 80%;
+      }
+    }
+  }
+
 
   &__author {
-    margin: 24px 0;
     height: 100%;
+    padding: 16px;
+    width: fit-content;
+    margin: 16px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-top: 0.5px solid #B171D9;
     border-bottom: 1px solid #B171D9;
-    padding: 16px;
-    width: fit-content;
-    margin: 16px auto;
+
+    @media (min-width: 1024px) {
+      border: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
 
 
     p {
@@ -33,6 +58,20 @@
       }
     }
 
+    .author__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: center;
+        height: 25px;
+      }
+    }
+
     .author {
       text-decoration: none;
       color: #FFFEFE;
@@ -41,6 +80,29 @@
 
       span {
         color: #B171D9;
+        margin-left: 4px;
+      }
+
+      &:hover {
+        border-bottom: 1px solid #B171D9;
+        font-weight: 700;
+      }
+
+      @media (min-width: 1024px) {
+        margin: 0 3px;
+        display: flex;
+        line-height: 1.5;
+
+        &:after{
+          content : "\00007C";
+          margin-left: 4px;
+        }
+      }
+
+      &:last-child {
+        &:after{
+          content: none;
+        }
       }
     }
   }
@@ -50,5 +112,25 @@
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: #FFFEFE;    
+    }
+
+
+    @media (min-width: 1024px) {
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 130px;
+
+
+      a:last-child {
+        margin-top: 8px;
+      }
+    }
+
   }
 }
