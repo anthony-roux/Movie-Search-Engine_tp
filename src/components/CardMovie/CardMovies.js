@@ -1,5 +1,5 @@
-import React, { useEffect, useState} from 'react';
-import { getfilms } from '../../service/films/films.js'
+import React from 'react';
+// import { getfilms } from '../../service/films/films.js'
 import CardMovie from './CardMovie.js';
 
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
