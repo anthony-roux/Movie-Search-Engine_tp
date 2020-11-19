@@ -2,12 +2,10 @@ import './Header.scss';
 import logo from '../../img/Eiga.svg';
 import '../../scss/style.scss';
 import {useState,useRef,useEffect} from 'react';
-import HomePage from '../HomePage/HomePage.js'
-
+import SearchResultMovies from './SearchResultMovies/SearchResultMovies'
 
 function Header() {
 
-  
     const inputRef = useRef(null);
     useEffect(()=>{
         inputRef.current.focus();
@@ -43,9 +41,8 @@ function Header() {
            </div>
         </div>
       </nav>
-      <HomePage surch={surch.surch}></HomePage>
+      {surch.surch === "" ? null : <SearchResultMovies surch={surch.surch}/>}
     </div>
-
   );
 }
 

@@ -13,7 +13,7 @@ import CardMovies from '../CardMovie/CardMovies.js'
 import CardPopularMovies from '../CardMovie/CardPopularMovies.js'
 import ListChristmasMovies from '../CardMovie/ListChristmasMovie.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
-import Header from '../Header/Header';
+
 
 function App() {
   const film = useFilms();
@@ -28,8 +28,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header></Header>
-        <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/" component={() => <HomePage genres={genre} movies={useChristmasFilm}/>}></Route>
         <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route exact path="/CardMovies" component={() => <CardMovies genres={genre} movies={film2} />}></Route>
         <Route exact path="/CardPopularMovies" component={() => <CardPopularMovies genres={genre} movies={usePopularFilm} />}></Route>

@@ -8,6 +8,7 @@ import imgdefault from './faultDetection-2-300x300.png'
 import './MovieDetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import useGenre from '../../hooks/useGenre/useGenre.js'
+import Header from '../../components/Header/Header';
 function MovieDetail(props){
     const id = props.match.params.id;
     const [Film, setFilm] = useState({
@@ -44,6 +45,7 @@ function MovieDetail(props){
 
     return (
         <div>
+            <Header/>
             <div className="header_detail"></div>
             <div className="container-fluid">
                 <div className="row">

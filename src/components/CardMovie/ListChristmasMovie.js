@@ -5,7 +5,7 @@ import CardMovie from './CardMovie.js';
 import Carousel from 'react-elastic-carousel';
 import './Caroussel.scss';
 import Slider from '../Slider/Slider.js'
-
+import Header from '../../components/Header/Header';
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
 // const API = 
@@ -20,8 +20,8 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
       {width: 1000, itemsToShow: 4},
       {width: 1200, itemsToShow: 5},
     ]
- 
-    let listOfCardChristmasMovieMovie = props.movies.map(movie => { 
+
+    let listOfCardChristmasMovie= props.movies.map(movie => { 
       
       let genres = []
       if (typeof genresList !== "undefined") {
@@ -40,9 +40,9 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
     console.log(ListChristmasMovie)
     return (
       <div>
-
+        <Header/>
         <Carousel className="caroussel" breakPoints={breakPoint}>
-          {listOfCardChristmasMovieMovie}
+          {listOfCardChristmasMovie}
         </Carousel>
         {/* {listOfCardPopularMovie} */}
       </div>

@@ -5,6 +5,7 @@ import CardMovie from './CardMovie.js';
 import Carousel from 'react-elastic-carousel';
 import './Caroussel.scss';
 import Slider from '../Slider/Slider.js'
+import Header from '../../components/Header/Header';
 
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
@@ -40,7 +41,7 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
     console.log(listOfCardPopularMovie)
     return (
       <div>
-
+        <Header/>
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardPopularMovie}
         </Carousel>
