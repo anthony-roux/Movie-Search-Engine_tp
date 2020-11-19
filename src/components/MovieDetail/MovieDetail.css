@@ -37,13 +37,6 @@ h1{
         background-position: center;
         z-index: 0 !important;
     }
-    .buttonplay {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        z-index: 10;
-        margin-bottom: 70px;
-    }
 
     .container{
         width: 100% !important;
@@ -307,4 +300,16 @@ h1{
         font-family: 'Rambla-Bold';
         padding-left: 125px !important;
     }
+}
+.lien_movie {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 100%;
+    font-family: 'Rambla-Bold';
+    background-color: #7F26BC;
+    color: #FFFEFE;
+    border: none;
 }
