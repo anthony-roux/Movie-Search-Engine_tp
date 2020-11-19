@@ -30,11 +30,6 @@ function App() {
     {width: 700, itemsToShow: 3 },
     {width: 1000, itemsToShow: 4},
     {width: 1200, itemsToShow: 5},
-    {width: 1400, itemsToShow: 6},
-    {width: 1400, itemsToShow: 7},
-    {width: 1400, itemsToShow: 8},
-    {width: 1400, itemsToShow: 9},
-    {width: 1400, itemsToShow: 10},
   ]
   console.log(genre);
   console.log(film);
