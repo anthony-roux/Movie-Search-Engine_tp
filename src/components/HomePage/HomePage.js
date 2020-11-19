@@ -1,3 +1,4 @@
+
 import CardMovie from '../CardMovie/CardMovie.js'
 function HomePage(props) {
     const {surch}=props;
@@ -6,5 +7,4 @@ function HomePage(props) {
             <CardMovie surch={surch}></CardMovie>
         </div>
     );
-}
 export default HomePage;

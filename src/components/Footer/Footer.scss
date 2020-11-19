@@ -1,27 +1,49 @@
+@import '../../scss/global/utilities';
+
+
 .footer {
   height: auto;
   padding: 0 30px;
   background-color: #302A4C;
   color: #FFFEFE;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexbox(column, space-between, inherit);
   padding: 24px 16px;
-  font-family: Rambla;
+  font-family: $rambla;
+
+  @include desktop-up {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  &__logoContainer {
+    @include desktop-up {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+
+      .footer__logo {
+        width: 80%;
+      }
+    }
+  }
 
 
   &__author {
-    margin: 24px 0;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 0.5px solid #B171D9;
-    border-bottom: 1px solid #B171D9;
     padding: 16px;
     width: fit-content;
     margin: 16px auto;
+    @include flexbox(column, space-between, center);
+    border-top: 0.5px solid $purple1;
+    border-bottom: 1px solid $purple1;
+
+    @include desktop-up {
+      border: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
 
 
     p {
@@ -29,7 +51,18 @@
       line-height: 1.2;    
 
       span {
-        color: #B171D9;
+        color: $purple1;
+      }
+    }
+
+    .author__container {
+      @include flexbox(column, space-between, center);
+      flex-wrap: wrap;
+
+      @include desktop-up {
+        flex-direction: row;
+        justify-content: center;
+        height: 25px;
       }
     }
 
@@ -40,7 +73,30 @@
       font-size: 14px;
 
       span {
-        color: #B171D9;
+        color: $purple1;
+        margin-left: 4px;
+      }
+
+      &:hover {
+        border-bottom: 1px solid $purple1;
+        font-weight: 700;
+      }
+
+      @include desktop-up {
+        margin: 0 3px;
+        display: flex;
+        line-height: 1.5;
+
+        &:after{
+          content : "\00007C";
+          margin-left: 4px;
+        }
+      }
+
+      &:last-child {
+        &:after{
+          content: none;
+        }
       }
     }
   }
@@ -50,5 +106,22 @@
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: #FFFEFE;    
+    }
+
+
+    @include desktop-up {
+      margin-top: 0;
+      @include flexbox(column, center, inherit);
+      width: 130px;
+
+      a:last-child {
+        margin-top: 8px;
+      }
+    }
+
   }
 }
