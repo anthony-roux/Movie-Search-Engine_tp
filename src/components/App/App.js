@@ -1,5 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
+import '../../scss/style.scss';
+
 import useFilms from '../../hooks/useFilms/useFilms.js'
 import useFilms2 from '../../hooks/useFilms2/useFilms2.js'
 import useGenre from '../../hooks/useGenre/useGenre.js'
@@ -11,6 +13,7 @@ import CardMovies from '../CardMovie/CardMovies.js'
 import CardPopularMovies from '../CardMovie/CardPopularMovies.js'
 import {  BrowserRouter, Route } from 'react-router-dom'
 import CardMovie from '../CardMovie/CardMovie';
+import Header from '../Header/Header';
 
 function App() {
   const film = useFilms();
@@ -23,6 +26,7 @@ function App() {
   console.log(filmid);
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail" component={MovieDetail}></Route>
