@@ -45,6 +45,7 @@ function MovieDetail(props){
     return (
         <div>
             <div className="header_detail"></div>
+            <div className="buttonplay" src="../../image_test/playbutton.svg"></div>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col colonne-1">
