@@ -2,10 +2,10 @@ import React from 'react';
 import './Header.scss';
 import logo from '../../img/Eiga.svg';
 import '../../scss/style.scss';
-import {useState} from 'react';
-import useFilms from '../../hooks/useFilms/useFilms.js'
-import Filter from '../Filter/Filter.js'
-import List from '../List/List';
+// import {useState} from 'react';
+// import useFilms from '../../hooks/useFilms/useFilms.js'
+// import Filter from '../Filter/Filter.js'
+// import List from '../List/List';
 
 
 function Header() {
