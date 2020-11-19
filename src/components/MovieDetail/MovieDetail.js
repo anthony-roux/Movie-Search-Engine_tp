@@ -66,6 +66,9 @@ function MovieDetail(props){
                         nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
                         </p>
                     </div>
+                    <div className="title_slider"> 
+                        <h3> Recommandations </h3>
+                    </div>
                 </div>
             </div>
         </div>

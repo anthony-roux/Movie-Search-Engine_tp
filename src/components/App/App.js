@@ -37,6 +37,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Carousel breakPoints={breakPoint}>
           <Slider number="1" />
           <Slider number="2" />
@@ -49,7 +50,6 @@ function App() {
           <Slider number="9" />
           <Slider number="10" />
         </Carousel>
-        <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route component={() => "404"}></Route>
       </BrowserRouter>
       <Footer />
