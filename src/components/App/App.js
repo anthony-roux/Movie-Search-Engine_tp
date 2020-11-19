@@ -20,6 +20,10 @@ function App() {
     {width: 1000, itemsToShow: 4},
     {width: 1200, itemsToShow: 5},
     {width: 1400, itemsToShow: 6},
+    {width: 1400, itemsToShow: 7},
+    {width: 1400, itemsToShow: 8},
+    {width: 1400, itemsToShow: 9},
+    {width: 1400, itemsToShow: 10},
   ]
   console.log(genre);
   console.log(film);
@@ -37,6 +41,10 @@ function App() {
           <Slider number="4"/>
           <Slider number="5"/>
           <Slider number="6"/>
+          <Slider number="7"/>
+          <Slider number="8"/>
+          <Slider number="9"/>
+          <Slider number="10"/>
         </Carousel>
         {/* <Route component={()=> '404'}></Route> */}
       </BrowserRouter>
