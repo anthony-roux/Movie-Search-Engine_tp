@@ -10,9 +10,9 @@ const DivStyle = styled.div`
   background-color: #333;
 `;
 
-const Slider = ({ number }) => (
+const Slider = ({ cardMovie }) => (
   <DivStyle className="slide">
-    <NumberStyle>{number}</NumberStyle>
+    <NumberStyle>{cardMovie}</NumberStyle>
   </DivStyle>
 );
 
