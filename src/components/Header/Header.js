@@ -3,7 +3,7 @@ import logo from '../../img/Eiga.svg';
 import '../../scss/style.scss';
 import {useState,useRef,useEffect} from 'react';
 import HomePage from '../HomePage/HomePage.js'
-import React, { useState } from 'react';
+
 
 function Header() {
 
