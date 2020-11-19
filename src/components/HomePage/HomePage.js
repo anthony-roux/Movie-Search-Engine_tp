@@ -1,10 +1,12 @@
 
-import CardMovie from '../CardMovie/CardMovie.js'
+import DetailCardMovie from '../CardMovie/DetailCardMovie/DetailCardMovie.js'
+
+
 function HomePage(props) {
     const {surch}=props;
     return(
         <div>
-            <CardMovie surch={surch}></CardMovie>
+            <DetailCardMovie surch={surch}></DetailCardMovie>
         </div>
     );
 }
