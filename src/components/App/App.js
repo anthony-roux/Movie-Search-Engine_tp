@@ -19,8 +19,8 @@ function App() {
   console.log(filmid);
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header></Header>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/MovieDetail/:id" component={MovieDetail}></Route>
         <Route component={()=> '404'}></Route>
