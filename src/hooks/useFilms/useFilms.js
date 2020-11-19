@@ -4,7 +4,7 @@ function useFilms() {
     const [films,setFilms]=useState([]);
     useEffect (()=> {
         getfilms()
-            .then(data => setFilms(data));
+            .then(data => setFilms(data.result));
     },[setFilms]);
     return films;
 }
