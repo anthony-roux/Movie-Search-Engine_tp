@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import "./Slider.css";
+import "./Slider.scss";
 
 const NumberStyle = styled.span`
   color: white;

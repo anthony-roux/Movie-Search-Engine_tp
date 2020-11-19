@@ -9,10 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen (max-width: 1500px) {
-    width: 320px;
-    height: 20vh;
-  }
 }
 
 button.rec-dot {
