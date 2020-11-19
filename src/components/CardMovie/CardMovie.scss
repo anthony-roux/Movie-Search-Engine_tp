@@ -1,29 +1,26 @@
-.card{
+.card_all{
   width: 200px;
-  height: 340px;
+  height: 380px;
   text-align: center;
   font-weight: bold;
- 
-}
-.card_body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 30px;
 }
-.card_title{
+
+.card_titre{
   color: white;
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .card_gern{
   color: #B171D9;
-  font-size: 14px;
+  font-size: 12px;
 }
 .card_img{
   display: block;
   margin: auto;
   width: 200px;
-  height: 280px;
-  border-radius: 15%;
+  height: 320px;
+  border-radius: 3%;
 }
