@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import "./Slider.css";
+import "./Slider.scss";
 
 const NumberStyle = styled.span`
   color: white;
@@ -10,9 +10,9 @@ const DivStyle = styled.div`
   background-color: #333;
 `;
 
-const Slider = ({ number }) => (
+const Slider = ({ cardMovie }) => (
   <DivStyle className="slide">
-    <NumberStyle>{number}</NumberStyle>
+    <NumberStyle>{cardMovie}</NumberStyle>
   </DivStyle>
 );
 

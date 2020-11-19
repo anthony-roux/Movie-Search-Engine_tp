@@ -77,8 +77,8 @@ function MovieDetail(props){
     /*return (
         <div>
             <p>{Film.id}</p>
-            <p>{Film.title}</p>
-            <p>{Film.overview}</p>
+            <p>{Film.title === "" ? "pa de titre" : Film.title}</p>
+            <p>{Film.overview === "" ? "rien" : Film.overview}</p>
             <a href={Film.homepage}>lien site film</a><br></br>
             <img src={linkimg+imgapi === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+imgapi  } alt={linkimg+imgapi}></img>
             <div>

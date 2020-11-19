@@ -1,23 +1,23 @@
+@import '../../scss/global/utilities';
+
+
 .footer {
   height: auto;
   padding: 0 30px;
   background-color: #302A4C;
   color: #FFFEFE;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexbox(column, space-between, inherit);
   padding: 24px 16px;
-  font-family: Rambla;
+  font-family: $rambla;
 
-  @media (min-width: 1024px) {
+  @include desktop-up {
     flex-direction: row;
     align-items: center;
-
   }
 
 
   &__logoContainer {
-    @media (min-width: 1024px) {
+    @include desktop-up {
       width: 130px;
       display: flex;
       justify-content: center;
@@ -34,14 +34,11 @@
     padding: 16px;
     width: fit-content;
     margin: 16px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 0.5px solid #B171D9;
-    border-bottom: 1px solid #B171D9;
+    @include flexbox(column, space-between, center);
+    border-top: 0.5px solid $purple1;
+    border-bottom: 1px solid $purple1;
 
-    @media (min-width: 1024px) {
+    @include desktop-up {
       border: none;
       flex-wrap: wrap;
       justify-content: center;
@@ -54,18 +51,15 @@
       line-height: 1.2;    
 
       span {
-        color: #B171D9;
+        color: $purple1;
       }
     }
 
     .author__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+      @include flexbox(column, space-between, center);
       flex-wrap: wrap;
 
-      @media (min-width: 1024px) {
+      @include desktop-up {
         flex-direction: row;
         justify-content: center;
         height: 25px;
@@ -79,16 +73,16 @@
       font-size: 14px;
 
       span {
-        color: #B171D9;
+        color: $purple1;
         margin-left: 4px;
       }
 
       &:hover {
-        border-bottom: 1px solid #B171D9;
+        border-bottom: 1px solid $purple1;
         font-weight: 700;
       }
 
-      @media (min-width: 1024px) {
+      @include desktop-up {
         margin: 0 3px;
         display: flex;
         line-height: 1.5;
@@ -119,13 +113,10 @@
     }
 
 
-    @media (min-width: 1024px) {
+    @include desktop-up {
       margin-top: 0;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      @include flexbox(column, center, inherit);
       width: 130px;
-
 
       a:last-child {
         margin-top: 8px;

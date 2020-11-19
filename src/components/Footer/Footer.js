@@ -2,7 +2,6 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import './Footer.scss';
 import logo from '../../img/Eiga.svg';
-import '../../scss/style.scss';
 
 
 function Footer() {
