@@ -3,7 +3,6 @@ import React from 'react';
 import CardMovie from './CardMovie.js';
 import Header from '../../components/Header/Header';
 import Footer from '../Footer/Footer';
-const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
