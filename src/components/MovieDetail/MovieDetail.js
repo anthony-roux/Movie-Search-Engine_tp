@@ -94,35 +94,5 @@ function MovieDetail(props){
             <Footer></Footer>
         </div>
       );
-    /*return (
-        <div>
-            <p>{Film.id}</p>
-            <p>{Film.title === "" ? "pa de titre" : Film.title}</p>
-            <p>{Film.overview === "" ? "rien" : Film.overview}</p>
-            <a href={Film.homepage}>lien site film</a><br></br>
-            <img src={linkimg+imgapi === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+imgapi  } alt={linkimg+imgapi}></img>
-            <div>
-                <p>genre</p>
-                <p>{genre && genre.map(genress => <p key={genress.id}>{genress.name}</p>)}</p>
-            </div>
-            <div>
-                <p>producteurs</p>
-                <p>{companies && companies.map(companiess => <p key={companiess.id}>{companiess.name}</p>)}</p>
-            </div>
-            <p>{Film.release_date}</p>
-            <p>{Film.vote_average}/10</p>
-            <div>
-                <h1>voir plus</h1>
-                <div>{recomandationss && recomandationss.map(recomandationsss => 
-                    <div key={Recomandation.id}>
-                        <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
-                        <p>{recomandationsss.title}</p>
-                        <p>{recomandationsss.vote_average}/10</p>  
-                    </div>)}
-                </div>
-            </div>
-
-        </div>
-    );*/
 }
 export default MovieDetail;
