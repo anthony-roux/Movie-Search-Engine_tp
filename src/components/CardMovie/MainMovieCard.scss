@@ -6,14 +6,17 @@
   background: url(./totoro.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: darken;
+  opacity: 0.4;
 
   &_img {
       display: none;
+      
     }
   
     &_body{
-      padding-top: 35vh;
+      // padding-top: 35vh;
+      opacity: 1;
+      
       
     .body_title {
       color: white;

@@ -10,8 +10,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from '../Footer/Footer';
 import Carousel from 'react-elastic-carousel';
 import '../CardMovie/CardPopularMovies';
+import Slider from '../Slider/Slider.js'
 //import useGenre from '../../hooks/useGenre/useGenre.js'
-function MovieDetail(props){
+function MovieDetail(props) {
+    
+    const breakPoint = [
+        {width: 320, itemsToShow: 1},
+        {width: 500, itemsToShow: 2},
+        {width: 700, itemsToShow: 3 },
+        {width: 1000, itemsToShow: 4},
+        {width: 1200, itemsToShow: 5},
+      ]
+
     const id = props.match.params.id;
     const [Film, setFilm] = useState({
         id:'',
@@ -81,14 +91,17 @@ function MovieDetail(props){
                 </div>
             </div>
 
-            <Carousel className="caroussel" >
-            <div>{recomandationss && recomandationss.map(recomandationsss => 
-                    <div key={Recomandation.id}>
-                        <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
-                        <p>{recomandationsss.title}</p>
-                        <p>{recomandationsss.vote_average}/10</p>  
-                    </div>)}
-                </div>
+            <Carousel className="caroussel" breakPoints={breakPoint}>
+                {recomandationss && recomandationss.map(recomandationsss => {
+                    return (
+                        <Slider cardMovie={<div key={Recomandation.id}>
+                            <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
+                            <p>{recomandationsss.title}</p>
+                            <p>{recomandationsss.vote_average}/10</p>  
+                            </div>}
+                        />
+                    )
+                })}
             </Carousel>
             
             <Footer></Footer>
