@@ -1,5 +1,6 @@
 import React from "react";
 // import "./CardMovie.scss";
+import {Link} from 'react-router-dom';
 import './MainMovieCard.scss';
 
 function MainMovieCard(props) {
@@ -17,10 +18,10 @@ function MainMovieCard(props) {
     return (
         <div>
             <div className="mainMovie">
-                <img src={props.imgsrc} className="card_img" alt="" />
-                <div className="mainMovie_body">
-                    <h1 className="card_title">{props.title}</h1>
-                    <p className="card_gern">{genresString}</p>
+                <img className="mainMovie_img" src={props.imgsrc} alt="" />
+                <div className="mainMovie_body body">
+                  <Link to="/MovieDetail/:id"><h1 className="body_title">{props.title}</h1></Link>
+                  <p className="body_genre">{genresString}</p>
                 </div>
             </div>
         </div>

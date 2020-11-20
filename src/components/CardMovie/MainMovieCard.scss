@@ -7,4 +7,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;
+
+  &_img {
+      display: none;
+    }
+  
+    &_body{
+      padding-top: 35vh;
+      
+    .body_title {
+      color: white;
+    }
+
+    .body_genre {
+      font-size: 22px;
+      color: white;
+    }
+  }
 }
