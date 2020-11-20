@@ -42,13 +42,13 @@ function MovieDetail(props){
      const imgapi = Film.backdrop_path;
      const linkimg = "https://image.tmdb.org/t/p/w500"
      const genre = Film.genres;
-     const companies = Film.production_companies;
+     //const companies = Film.production_companies;
      const recomandationss = Recomandation.results;
 
     return (
         <div>
-        <a href="../"><img className="bouton_retour" src="https://knoxmuseum.org/wp-content/uploads/2016/06/chevron-left-white.png"></img></a>
-        <a href={Film.homepage}><img className="bouton_site" src="https://icon-library.com/images/globe-icon-white/globe-icon-white-8.jpg"></img></a>
+        <a href="../"><img className="bouton_retour" src="https://knoxmuseum.org/wp-content/uploads/2016/06/chevron-left-white.png" alt=""></img></a>
+        <a href={Film.homepage}><img className="bouton_site" src="https://icon-library.com/images/globe-icon-white/globe-icon-white-8.jpg"  alt=""></img></a>
         <img className="header_detail" src={linkimg+imgapi === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+imgapi  } alt={linkimg+imgapi}></img>
             <div className="container-fluid">
                 <div className="row">
