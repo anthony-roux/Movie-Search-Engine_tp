@@ -24,18 +24,49 @@ h1{
     letter-spacing: 1px;
 }
 
+.bouton_retour:hover{
+    transform: translateX(-20px);
+    transition: .5s all ease-in-out;
+}
+
+.bouton_site:hover{
+    transform: scale(1.4);
+    transition: .5s all ease-in-out;
+}
+
 /************************** Media Queries **************************/
 
 @media only screen and (min-width: 0px) and (max-width: 768px){
 
+    .bouton_retour{
+        width: 30px;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        z-index: 1;
+    }
+
+    .bouton_site{
+        width: 40px;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        z-index: 1;
+    }
+
+
     .header_detail{
         width: 100%;
         height: 230px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(19, 19, 27,1) 100%), url("../../image_test/joker.png");
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(19, 19, 27,1) 100%);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        opacity: 0.5;
         z-index: 0 !important;
+    }
+    img {
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(19, 19, 27,1) 100%);
     }
 
     .container{
@@ -99,13 +130,31 @@ h1{
     
 }
 @media only screen and (min-width: 768px) and (max-width: 1366px){
+
+    .bouton_retour{
+        width: 50px;
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        z-index: 1;
+    }
+
+    .bouton_site{
+        width: 60px;
+        position: fixed;
+        top: 30px;
+        right: 40px;
+        z-index: 1;
+    }
+
     .header_detail{
         width: 100%;
         height: 530px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(19, 19, 27,1) 100%), url("../../image_test/joker.png");
+        /* background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(19, 19, 27,1) 100%), url("../../image_test/joker.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        opacity: 0.5;
         z-index: 0 !important;
     }
 
@@ -149,7 +198,7 @@ h1{
 
     .colonne-2{
         text-align: left;
-        line-height: 12px;
+        line-height: 20px;
         display: flex;
         flex-direction: column;
 
@@ -201,13 +250,31 @@ h1{
 }
 
 @media only screen and (min-width: 1366px) {
+
+    .bouton_retour{
+        width: 50px;
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .bouton_site{
+        width: 60px;
+        position: fixed;
+        top: 30px;
+        right: 50px;
+        z-index: 1;
+    }
+
     .header_detail{
         width: 100%;
         height: 530px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(19, 19, 27,1) 100%), url("../../image_test/joker.png");
+        /* background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(19, 19, 27,1) 100%), url("../../image_test/joker.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        opacity: 0.5;
         z-index: 0 !important;
     }
 
@@ -251,7 +318,7 @@ h1{
 
     .colonne-2{
         text-align: left;
-        line-height: 12px;
+        line-height: 25px;
         display: flex;
         flex-direction: column;
 
@@ -301,15 +368,4 @@ h1{
         padding-left: 125px !important;
     }
 }
-.lien_movie {
-    position: fixed;
-    width: 80px;
-    height: 80px;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 100%;
-    font-family: 'Rambla-Bold';
-    background-color: #7F26BC;
-    color: #FFFEFE;
-    border: none;
-}
+
