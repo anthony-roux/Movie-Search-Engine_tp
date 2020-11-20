@@ -1,5 +1,3 @@
-//import useFilmsId from '../../hooks/useFilmsId/useFilmsId.js'
-//import useRecomendations from '../../hooks/useRecomendations/useRecomendations.js'
 import {Link} from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import { getFilmid } from '../../service/filmid/filmid.js'
@@ -11,7 +9,6 @@ import Footer from '../Footer/Footer';
 import Carousel from 'react-elastic-carousel';
 import '../CardMovie/CardPopularMovies';
 import Slider from '../Slider/Slider.js'
-//import useGenre from '../../hooks/useGenre/useGenre.js'
 function MovieDetail(props) {
     
     const breakPoint = [
@@ -52,7 +49,6 @@ function MovieDetail(props) {
      const imgapi = Film.backdrop_path;
      const linkimg = "https://image.tmdb.org/t/p/w500"
      const genre = Film.genres;
-     //const companies = Film.production_companies;
      const recomandationss = Recomandation.results;
 
     return (
@@ -78,16 +74,6 @@ function MovieDetail(props) {
                         {Film.overview === "" ? "rien" : Film.overview}
                         </p>
                     </div>
-                    {/* <div className="title_slider"> 
-                        <h3> Recommandations </h3>
-                        <div>{recomandationss && recomandationss.map(recomandationsss => 
-                    <div key={Recomandation.id}>
-                        <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
-                        <p>{recomandationsss.title}</p>
-                        <p>{recomandationsss.vote_average}/10</p>  
-                    </div>)}
-                </div>
-                    </div> */}
                 </div>
             </div>
 
