@@ -5,7 +5,7 @@ import MainMovieCard from '../CardMovie/MainMovieCard.js'
 import Header from '../../components/Header/Header';
 import Footer from '../Footer/Footer';
 
-function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMovie }) {
+function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMovie, id }) {
 
     const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
@@ -32,6 +32,7 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
         let genresList = genres.genres
         let mainMovieImage = mainMovie.poster_path
         let mainMovieTitle = mainMovie.title
+        let mainMovieId = mainMovie.id
         let genreInfos = []
         genreInfos = mainMovie.genre_ids.map(genreId => {
             return genresList.find(genre => genre.id === genreId)
@@ -39,7 +40,7 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
 
         console.error(genreInfos)
 
-        mainMovieComponent = <MainMovieCard imgsrc={baseUrl + mainMovieImage} title={mainMovieTitle} genres={genreInfos} />
+        mainMovieComponent = <MainMovieCard imgsrc={baseUrl + mainMovieImage} title={mainMovieTitle} id={mainMovieId} genres={genreInfos} />
     }
 
 
@@ -49,7 +50,7 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
     return(
         <div>
             <Header surch={surch} />
-            {surch[0].surch != "" ? <DetailCardMovie surch={surch}></DetailCardMovie> : null}
+            {surch[0].surch !== "" ? <DetailCardMovie surch={surch}></DetailCardMovie> : null}
             {mainMovieComponent}
             <ListChristmasMovie genres={genres} movies={moviesChristmas} />
             <CardPopularMovies genres={genres} movies={movies} />

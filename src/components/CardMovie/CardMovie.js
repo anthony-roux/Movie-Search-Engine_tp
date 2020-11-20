@@ -19,13 +19,12 @@ function CardMovie(props) {
         <div>
             <div className="card_all">
                 <div>
-                <Link to="/MovieDetail/:id"><img src={props.imgsrc} className="card_img" alt="" /></Link>
+                <Link to={`/MovieDetail/${props.id}`}><img src={props.imgsrc} className="card_img" alt="" /></Link>
                 </div>
                 <div className="card_content">
-                    <h1 className="card_titre">{props.title}</h1>
+                    <h1 className="card_titre">{props.title === undefined ? "EIGA CREW" : props.title}</h1>
                     <p className="card_gern">{genresString}</p>
                 </div>
-
             </div>
         </div>
     )

@@ -24,7 +24,7 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
       console.log(`lil ${genres}`)
 
       return (
-        <CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} />
+        <CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} id={movie.id} />
       )
     })
 
