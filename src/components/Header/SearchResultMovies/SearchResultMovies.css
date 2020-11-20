@@ -1,3 +1,28 @@
 .active1{
   display: none;
 }
+.Flexcard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+  color: white;
+}
+
+.Card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image_card {
+  width: 200px;
+  height: 250px;
+  border-radius: 3%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.title_card {
+  color: #b171d9;
+  width: 200px;
+  height: 45px;
+}
