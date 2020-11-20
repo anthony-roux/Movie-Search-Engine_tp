@@ -1,7 +1,7 @@
 import DetailCardMovie from '../CardMovie/DetailCardMovie/DetailCardMovie.js'
 import ListChristmasMovie from '../CardMovie/ListChristmasMovie.js'
 import CardPopularMovies from '../CardMovie/CardPopularMovies.js'
-import MainMovieCard from '../CardMovie/MainMovieCard.js'
+import MainMovieCard from '../CardMovie/MainMovieCard/MainMovieCard.js'
 import Header from '../../components/Header/Header';
 import Footer from '../Footer/Footer';
 
