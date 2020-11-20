@@ -1,5 +1,6 @@
 import React from "react";
 // import "./CardMovie.scss";
+import './MainMovieCard.scss';
 
 function MainMovieCard(props) {
  // console.log(props.genres)
@@ -15,9 +16,9 @@ function MainMovieCard(props) {
     console.log("coucou" +  genresString)
     return (
         <div>
-            <div className="card">
+            <div className="mainMovie">
                 <img src={props.imgsrc} className="card_img" alt="" />
-                <div className="card_body">
+                <div className="mainMovie_body">
                     <h1 className="card_title">{props.title}</h1>
                     <p className="card_gern">{genresString}</p>
                 </div>

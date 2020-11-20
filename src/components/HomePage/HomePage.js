@@ -39,7 +39,7 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
 
         console.error(genreInfos)
 
-        mainMovieComponent = <MainMovieCard imgsrc={baseUrl + mainMovieImage} title={title} genres={genreInfos} />
+        mainMovieComponent = <MainMovieCard imgsrc={baseUrl + mainMovieImage} title={mainMovieTitle} genres={genreInfos} />
     }
 
 
