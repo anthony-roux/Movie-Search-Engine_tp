@@ -1,11 +1,17 @@
 import React from 'react';
-import './cardTEST.css';
-//import img from '../../img/dead.png';
 import {useState,useEffect} from 'react';
 import { getfilms } from '../../../service/films/films'
 import {Link} from 'react-router-dom';
-import imgdefault from '../../MovieDetail/faultDetection-2-300x300.png'
-import './SearchResultMovies.css'
+import './SearchResultMovies.css';
+import 'bootstrap/scss/bootstrap.scss';
+import 'react-bootstrap-grid-component/dist/sizingbreakpoints.scss';
+import { Container } from "react-bootstrap-grid-component/dist/Container";
+import { Column } from "react-bootstrap-grid-component/dist/Column";
+import { Row } from "react-bootstrap-grid-component/dist/Row";
+import imgdefault from '../../MovieDetail/faultDetection-2-300x300.png';
+
+
+
 function SearchResultMovies(props) {
     const {surch}=props;
     const linkimg = "https://image.tmdb.org/t/p/w500"
@@ -30,24 +36,33 @@ function SearchResultMovies(props) {
     }
 return (
 <div>
-    <div className={`${isclick ? "active1" : "" }`}>
-        
-            <div className="card_body">
-                <h1>{detailsFilm.page}</h1> {/*props.title*/}
-                <p className="card_gern">Action/Comédie</p>{/*props.gern*/}
-                <div>
-                    <p>result</p>
-                    <div>{filmresults && filmresults.map(filmresultsss => 
-                        <div key={filmresultsss.id}>
-                            <p>{filmresultsss.title}</p>
-                            <Link to={`/MovieDetail/${filmresultsss.id}`} onClick={clickimg} ><img src={linkimg+filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+filmresultsss.backdrop_path} className="card_img" alt=""/></Link>
-                        </div>
-                    )}</div>
-                    
-            </div>
+<Container>
+  <Row>
+    <Column >
+      <div className={`${isclick ? "active1" : "" }`}>
+          <div>{filmresults && filmresults.map(filmresultsss => 
+            <div key={filmresultsss.id}>
+              <p>{filmresultsss.title}</p>
+                <Link to={`/MovieDetail/${filmresultsss.id}`} onClick={clickimg} ><img src={linkimg+filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+filmresultsss.backdrop_path} className="card_img" alt=""/></Link>
+                  </div>
+                  )}
+              </div>  
         </div>
-  </div>
-</div>  
+    </Column>
+    <Column >
+      <div className={`${isclick ? "active1" : "" }`}>
+          <div>{filmresults && filmresults.map(filmresultsss => 
+            <div key={filmresultsss.id}>
+              <p>{filmresultsss.title}</p>
+                <Link to={`/MovieDetail/${filmresultsss.id}`} onClick={clickimg} ><img src={linkimg+filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+filmresultsss.backdrop_path} className="card_img" alt=""/></Link>
+                  </div>
+                  )}
+              </div>  
+        </div>
+    </Column>
+    </Row>
+</Container>
+</div>
 );
   }
 export default SearchResultMovies;

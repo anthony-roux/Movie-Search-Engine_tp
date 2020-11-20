@@ -11,10 +11,12 @@ function CardMovie(props) {
 
     return (
         <div>
-            <div className="card">
+            <div className="card_all">
+                <div>
                 <img src={props.imgsrc} className="card_img" alt="" />
-                <div className="card_body">
-                    <h1 className="card_title">{props.title}</h1>
+                </div>
+                <div className="card_content">
+                    <h1 className="card_titre">{props.title}</h1>
                     <p className="card_gern">{genresString}</p>
                 </div>
             </div>

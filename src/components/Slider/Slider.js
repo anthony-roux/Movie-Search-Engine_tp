@@ -7,7 +7,7 @@ const NumberStyle = styled.span`
   color: white;
 `;
 const DivStyle = styled.div`
-  background-color: #333;
+  background-color: #13131C;
 `;
 
 const Slider = ({ cardMovie }) => (

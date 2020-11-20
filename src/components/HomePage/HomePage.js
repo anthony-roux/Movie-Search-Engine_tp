@@ -7,7 +7,7 @@ function HomePage({ surch, genres, movies, moviesChristmas }) {
     return(
         <div>
             <Header surch={surch} />
-            {surch[0].surch != "" ? <DetailCardMovie surch={surch}></DetailCardMovie> : null}
+            {surch[0].surch != "" ? <DetailCardMovie surch={surch}/> : null}
             <ListChristmasMovie genres={genres} movies={moviesChristmas} />
             <CardPopularMovies genres={genres} movies={movies} />
             <Footer/>
