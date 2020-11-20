@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import { getFilmid } from '../../service/filmid/filmid.js'
 import { getRecomandations } from '../../service/recomandations/recomandations.js'
-import imgdefault from './faultDetection-2-300x300.png'
+import imgdefault from './eigamovie.png'
 import './MovieDetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from '../Footer/Footer';
