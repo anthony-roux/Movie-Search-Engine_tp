@@ -11,7 +11,7 @@ import imgdefault from '../../MovieDetail/eigamovie.png';
 
 function SearchResultMovies(props) {
     const {surch}=props;
-    const linkimg = "https://image.tmdb.org/t/p/w500"
+    const linkimg = "https://image.tmdb.org/t/p/w300"
     const [detailsFilm, setdetailsFilm] = useState({
         id:'',
         title:'',
