@@ -23,7 +23,7 @@ function Header(props) {
     }
   
     const [isActive, setIsActive ] = useState(false)
-
+    console.log(isActive);
     function show_searchField() {
       setIsActive(true)
     }

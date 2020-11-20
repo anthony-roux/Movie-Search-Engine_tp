@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import './SearchResultMovies.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import imgdefault from '../../MovieDetail/faultDetection-2-300x300.png';
+import imgdefault from '../../MovieDetail/eigamovie.png';
 
 
 
