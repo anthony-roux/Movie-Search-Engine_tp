@@ -28,24 +28,15 @@ function DetailCardMovie(props) {
     console.log(filmresults);
   return (
     <div>
-      <div className="card">
-        <div className="card_body">
-          <h1>{detailsFilm.page}</h1> {/*props.title*/}
-          <p className="card_gern">Action/Comédie</p>{/*props.gern*/}
-          <div>
-            <p>result</p>
-            <div>
-              {filmresults && filmresults.map(filmresultsss =>
-                <div key={filmresultsss.id}>
-                  <p>{filmresultsss.title}</p>
-                  <Link to={`/MovieDetail/${filmresultsss.id}`}>
-                    <img src={linkimg + filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg + filmresultsss.backdrop_path} className="card_img" alt="" />
-                  </Link>
-                </div>
-              )}
-            </div>
+      <div>
+        {filmresults && filmresults.map(filmresultsss =>
+          <div key={filmresultsss.id}>
+            <p>{filmresultsss.title}</p>
+            <Link to={`/MovieDetail/${filmresultsss.id}`}>
+              <img src={linkimg + filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg + filmresultsss.backdrop_path} className="card_img" alt="" />
+            </Link>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
