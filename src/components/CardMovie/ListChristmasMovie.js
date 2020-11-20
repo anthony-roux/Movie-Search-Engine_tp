@@ -40,6 +40,7 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
     return (
       <div>
+        <h1>Recommended for you</h1>
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardChristmasMovie}
         </Carousel>

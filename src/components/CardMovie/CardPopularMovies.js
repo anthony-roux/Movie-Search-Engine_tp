@@ -41,6 +41,7 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
     console.log(listOfCardPopularMovie)
     return (
       <div>
+        <h1>Popular films</h1>
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardPopularMovie}
         </Carousel>
