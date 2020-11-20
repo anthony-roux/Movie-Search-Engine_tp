@@ -9,23 +9,6 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
 
     const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
-    // let genresList = props.genres.genres
- 
-    // let listOfCardMovie = props.movies.map(movie => { 
-    //   console.log(`lil ${genresList}`)
-    //   let genres = []
-    //   if (typeof genresList !== "undefined") {
-    //     genres = movie.genre_ids.map(genreId => {
-    //       return genresList.find(genre => genre.id === genreId)
-    //     })
-    //   }
-
-    //   console.log(`lil ${genres}`)
-
-    //   return (
-    //     <CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} />
-    //   )
-    // })
     let mainMovieComponent = null;
     if (typeof genres.genres !== "undefined" && typeof mainMovie.genre_ids !== "undefined" && genres.genres.length > 0) {
         
@@ -37,9 +20,6 @@ function HomePage({ surch, genres, movies, moviesChristmas, image, title, mainMo
         genreInfos = mainMovie.genre_ids.map(genreId => {
             return genresList.find(genre => genre.id === genreId)
         })
-
-        console.error(genreInfos)
-
         mainMovieComponent = <MainMovieCard imgsrc={baseUrl + mainMovieImage} title={mainMovieTitle} id={mainMovieId} genres={genreInfos} />
     }
 
