@@ -35,10 +35,10 @@ return (
 <div>
     <div className={`${isclick ? "active1" : "" }`}>
         <div className="Flexcard">{filmresults && filmresults.map(filmresultsss => 
-          <div className="Card" key={filmresultsss.id}>
+          <div className="Card_all" key={filmresultsss.id}>
               <Link to={`/MovieDetail/${filmresultsss.id}`} onClick={clickimg} ><img className="image_card" src={linkimg+filmresultsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+filmresultsss.backdrop_path} alt=""/>
               </Link>
-              <p className="title_card">{filmresultsss.title}</p>
+              <p className="card_titre">{filmresultsss.title}</p>
           </div>
                 )}
             </div>  

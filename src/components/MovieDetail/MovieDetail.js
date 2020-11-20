@@ -94,11 +94,18 @@ function MovieDetail(props) {
             <Carousel className="caroussel" breakPoints={breakPoint}>
                 {recomandationss && recomandationss.map(recomandationsss => {
                     return (
-                        <Slider cardMovie={<div key={Recomandation.id}>
-                            <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
-                            <p>{recomandationsss.title}</p>
-                            <p>{recomandationsss.vote_average}/10</p>  
-                            </div>}
+                        <Slider className="slides" cardMovie={<div key={Recomandation.id}>
+                            <div className="card_all">
+                            <div>
+                            <Link to={`/MovieDetail/${recomandationsss.id}`}><img className="card_img" src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
+                            </div>
+                            <div className="card_content">
+                            <p className="card_titre">{recomandationsss.title}</p>
+                            <p className="card_gern">{recomandationsss.vote_average}/10</p>  
+                            </div>
+                            </div>
+                            </div>
+                            }
                         />
                     )
                 })}
