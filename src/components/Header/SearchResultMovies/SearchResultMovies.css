@@ -39,15 +39,5 @@
   margin-left: 1em;
 }
 
-@media (min-width: 1200px){
-  .Card_all {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .image_card {
-    width: 400px;
-    height: 450px;
-  }
-}
+
 
