@@ -49,5 +49,4 @@ This project is using Sass and
 - [WPaulos](https://github.com/WPaulos)
 - [Renaudfradin](https://github.com/Renaudfradin)
 - [tongxing](https://github.com/tiphanieTong)
-- [Renaudfradin](https://github.com/Renaudfradin)
 - [dorian-vidal](https://github.com/dorian-vidal)
