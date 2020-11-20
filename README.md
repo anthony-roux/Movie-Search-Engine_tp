@@ -32,6 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
 
 ## Styling 
+
 This project is using Sass and
 - [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
 
