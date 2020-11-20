@@ -3,10 +3,9 @@
   width: 100vw;
   background-color: white;
   margin-bottom: 100px;
-  background: url(./totoro.jpg);
+  background: url(./totoroDark.png);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.4;
 
   &_img {
       display: none;
@@ -14,8 +13,6 @@
     }
   
     &_body{
-      // padding-top: 35vh;
-      opacity: 1;
       
       
     .body_title {
