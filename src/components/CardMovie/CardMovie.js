@@ -10,11 +10,6 @@ function CardMovie(props) {
         return genre.name
     }).join("/");
 
-    // const [isclick , setisclick ] = useState(false);
-    // function clickimg() {
-    //     setisclick(true);
-    // }
-
     return (
         <div>
             <div className="card_all">

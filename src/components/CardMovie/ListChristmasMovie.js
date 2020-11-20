@@ -1,15 +1,11 @@
 import React from 'react';
-// import { getfilms } from '../../service/films/films.js'
 import CardMovie from './CardMovie.js';
 
 import Carousel from 'react-elastic-carousel';
 import './Caroussel.scss';
 import Slider from '../Slider/Slider.js'
-//import Header from '../../components/Header/Header';
-//import Footer from '../Footer/Footer';
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
-// const API = 
   function ListChristmasMovie(props) {
 
     let genresList = props.genres.genres
@@ -44,7 +40,6 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardChristmasMovie}
         </Carousel>
-        {/* {listOfCardPopularMovie} */}
       </div>
     )
   }

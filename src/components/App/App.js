@@ -18,23 +18,17 @@ import {  BrowserRouter, Route } from 'react-router-dom'
 
 
 function App() {
-  //const film = useFilms();
-  //const film2 =useFilms2();
   const genre =useGenre();
-  //const filmid = useFilmsId();
   const usePopularFilm = usePopularMovie();
   const useChristmasFilm = useChristmasMovie();
   const useSurch = UserSurch();
   const useMainFilm = UseMainFilm();
-  ///console.log(genre);
-  ///console.log(film);
-  ///console.log(filmid);
+
   return (
     <div className="App">
       <BrowserRouter>
         <Route exact path="/" render={() => <HomePage mainMovie={useMainFilm} surch={useSurch} genres={genre} moviesChristmas={useChristmasFilm} movies={usePopularFilm}/>}></Route>
         <Route exact path="/MovieDetail/:id" render={(props) => <MovieDetail {...props} surch={useSurch} />}></Route>
-        {/*<Route exact path="/CardMovies" component={() => <CardMovies surch={useSurch} genres={genre} movies={film2} />}></Route>*/}
       </BrowserRouter>
     </div>
   );

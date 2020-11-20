@@ -1,15 +1,10 @@
 import React from 'react';
-// import { getfilms } from '../../service/films/films.js'
 import CardMovie from './CardMovie.js';
-
 import Carousel from 'react-elastic-carousel';
 import './Caroussel.scss';
 import Slider from '../Slider/Slider.js'
-//import Header from '../../components/Header/Header';
-//import Footer from '../Footer/Footer';
 const baseUrl = "http://image.tmdb.org/t/p/w185/";
 
-// const API = 
   function CardPopularMovies(props) {
 
     let genresList = props.genres.genres
@@ -31,21 +26,17 @@ const baseUrl = "http://image.tmdb.org/t/p/w185/";
         })
       }
 
-      console.log(`lil ${genres}`)
-
       return (
         <Slider cardMovie={<CardMovie imgsrc={baseUrl + movie.poster_path} title={movie.title} genres={genres} id={movie.id} />}/>
       )
     })
 
-    console.log(listOfCardPopularMovie)
     return (
       <div>
         <h1>Popular films</h1>
         <Carousel className="caroussel" breakPoints={breakPoint}>
           {listOfCardPopularMovie}
         </Carousel>
-        {/* {listOfCardPopularMovie} */}
       </div>
     )
   }
