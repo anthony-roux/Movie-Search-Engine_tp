@@ -21,7 +21,7 @@ function MainMovieCard(props) {
               <img className="mainMovie_img" src={props.imgsrc} alt="" />
                 {/* <video className="mainMovie_video" src={props.video}></video> */}
                 <div className="mainMovie_body body">
-                <Link to="/MovieDetail/:id"><h1 className="body_title">{props.title}</h1></Link>
+                  <Link to={`/MovieDetail/${props.id}`}><h1 className="body_title">{props.title}</h1></Link>
                   <p className="body_genre">{genresString}</p>
                 </div>
             </div>

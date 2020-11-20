@@ -20,7 +20,7 @@ function DetailCardMovie(props) {
         vote_average:'',
     });
     useEffect(()=>{
-      if (surch.surch != "") {
+      if (surch.surch !== "") {
         getfilms(surch).then(data=>setdetailsFilm(data));
       }
     },[surch])

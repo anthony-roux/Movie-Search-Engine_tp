@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import { getFilmid } from '../../service/filmid/filmid.js'
 import { getRecomandations } from '../../service/recomandations/recomandations.js'
-import imgdefault from './faultDetection-2-300x300.png'
+import imgdefault from './eigamovie.png'
 import './MovieDetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from '../Footer/Footer';
@@ -52,13 +52,13 @@ function MovieDetail(props) {
      const imgapi = Film.backdrop_path;
      const linkimg = "https://image.tmdb.org/t/p/w500"
      const genre = Film.genres;
-     const companies = Film.production_companies;
+     //const companies = Film.production_companies;
      const recomandationss = Recomandation.results;
 
     return (
         <div>
-        <a href="../"><img className="bouton_retour" src="https://knoxmuseum.org/wp-content/uploads/2016/06/chevron-left-white.png"></img></a>
-        <a href={Film.homepage}><img className="bouton_site" src="https://icon-library.com/images/globe-icon-white/globe-icon-white-8.jpg"></img></a>
+        <a href="../"><img className="bouton_retour" src="https://knoxmuseum.org/wp-content/uploads/2016/06/chevron-left-white.png" alt=""></img></a>
+        <a href={Film.homepage}><img className="bouton_site" src="https://icon-library.com/images/globe-icon-white/globe-icon-white-8.jpg"  alt=""></img></a>
         <img className="header_detail" src={linkimg+imgapi === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+imgapi  } alt={linkimg+imgapi}></img>
             <div className="container-fluid">
                 <div className="row">
@@ -107,35 +107,5 @@ function MovieDetail(props) {
             <Footer></Footer>
         </div>
       );
-    /*return (
-        <div>
-            <p>{Film.id}</p>
-            <p>{Film.title === "" ? "pa de titre" : Film.title}</p>
-            <p>{Film.overview === "" ? "rien" : Film.overview}</p>
-            <a href={Film.homepage}>lien site film</a><br></br>
-            <img src={linkimg+imgapi === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+imgapi  } alt={linkimg+imgapi}></img>
-            <div>
-                <p>genre</p>
-                <p>{genre && genre.map(genress => <p key={genress.id}>{genress.name}</p>)}</p>
-            </div>
-            <div>
-                <p>producteurs</p>
-                <p>{companies && companies.map(companiess => <p key={companiess.id}>{companiess.name}</p>)}</p>
-            </div>
-            <p>{Film.release_date}</p>
-            <p>{Film.vote_average}/10</p>
-            <div>
-                <h1>voir plus</h1>
-                <div>{recomandationss && recomandationss.map(recomandationsss => 
-                    <div key={Recomandation.id}>
-                        <Link to={`/MovieDetail/${recomandationsss.id}`}><img src={linkimg+recomandationsss.backdrop_path === "https://image.tmdb.org/t/p/w500null" ? imgdefault : linkimg+recomandationsss.backdrop_path} alt={linkimg+recomandationsss.backdrop_path}></img></Link>
-                        <p>{recomandationsss.title}</p>
-                        <p>{recomandationsss.vote_average}/10</p>  
-                    </div>)}
-                </div>
-            </div>
-
-        </div>
-    );*/
 }
 export default MovieDetail;
